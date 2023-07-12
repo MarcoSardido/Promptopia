@@ -56,7 +56,7 @@ const Feed = () => {
     const result = filterSearch(tagName)
     setSearchResult(result)
   }
-  
+
   return (
     <section className='feed'>
       <form className='relative w-full flex-center'>
@@ -66,13 +66,16 @@ const Feed = () => {
           onChange={handleSearch}
           required />
       </form>
-      {searchResult ? (
+      {searchResult.length ? (
         <PromptCardList
           data={searchResult}
           handleTagClick={handleTagSearchClick}
         />
       ) : (
-        <PromptCardList data={posts} handleTagClick={handleTagSearchClick} />
+        <PromptCardList
+          data={posts}
+          handleTagClick={handleTagSearchClick}
+        />
       )}
     </section>
   )

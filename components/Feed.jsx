@@ -66,7 +66,8 @@ const Feed = () => {
           onChange={handleSearch}
           required />
       </form>
-      {searchResult.length ? (
+      
+      {searchedText ? (
         <PromptCardList
           data={searchResult}
           handleTagClick={handleTagSearchClick}

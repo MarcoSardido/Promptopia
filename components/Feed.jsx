@@ -55,8 +55,8 @@ const Feed = () => {
 
     const result = filterSearch(tagName)
     setSearchResult(result)
-
   }
+  
   return (
     <section className='feed'>
       <form className='relative w-full flex-center'>
